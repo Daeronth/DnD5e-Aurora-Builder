@@ -3,7 +3,7 @@
     <info>
         <name>Way of the Fire Elementalist</name>
         <update version="1.0">
-            <file name="fire_elementalist.xml" url="https://raw.githubusercontent.com/Daeronth/DnD5e-Aurora-Builder/main/fire_elementalist.xml" />
+            <file name="fire_elementalist.xml" url="https://raw.githubusercontent.com/Daeronth/DnD5e-Aurora-Builder/refs/heads/main/fire_elementalist.xml" />
         </update>
     </info>
 
