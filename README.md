@@ -42,7 +42,7 @@ This repository is maintained primarily for personal use. Contributions are welc
 
 If you encounter any issues or have questions about the content:
 - Open an issue in this repository.
-- Refer to [Aurora Builder documentation](https://docs.aurorabuilder.com/) for additional guidance.
+- Refer to [Aurora Builder documentation]([https://docs.aurorabuilder.com/](https://aurorabuilder.com/documentation/) for additional guidance.
 
 ---
 
