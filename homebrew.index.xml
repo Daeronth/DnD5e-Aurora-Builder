@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<index>
+    <info>
+        <name>Custom Homebrew Content</name>
+        <update version="1.0">
+            <file name="homebrew.index" url="https://raw.githubusercontent.com/Daeronth/DnD5e-Aurora-Builder/main/homebrew.index" />
+        </update>
+    </info>
+    <files>
+        <file name="fire_elementalist.xml" url="https://raw.githubusercontent.com/Daeronth/DnD5e-Aurora-Builder/main/fire_elementalist.xml" />
+    </files>
+</index>
