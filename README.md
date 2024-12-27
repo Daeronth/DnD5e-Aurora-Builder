@@ -25,6 +25,7 @@ To use the content in this repository, follow these steps:
 ## What’s Included
 
 - **Way of the Fire Elementalist (Monk Subclass):** A monk tradition that channels inner flames into devastating spells and fiery strikes.
+- ** This subclass for monk was requested by one of my players, it's already on dandwiki so credit goes to whoever created it. Refer to --> https://www.dandwiki.com/wiki/Way_of_the_Fire_Elementalist_(5e_Subclass)
 
 ---
 
