@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<elements>
+    <info>
+        <name>Way of the Fire Elementalist</name>
+        <update version="1.0">
+            <file name="fire_elementalist.xml" url="https://raw.githubusercontent.com/Daeronth/DnD5e-Aurora-Builder/main/fire_elementalist.xml" />
+        </update>
+    </info>
+
+    <!-- Subclass Definition -->
+    <element name="Way of the Fire Elementalist" type="Archetype" source="Custom Homebrew" id="ID_HOME_ARC_WAY_OF_THE_FIRE_ELEMENTALIST">
+        <supports>Monastic Tradition</supports>
+        <description>
+            <p>Monks of the Way of the Fire Elementalist unlock their inner flame, using their breath to generate energy and manipulating flame to devastating effect. Through their mastery of fire, they unleash powerful spells and fiery strikes.</p>
+            <div element="ID_HOME_ARC_FEATURE_FIRE_MAGIC" />
+            <div element="ID_HOME_ARC_FEATURE_HEART_OF_FIRE" />
+            <div element="ID_HOME_ARC_FEATURE_FIRE_IN_THE_VEINS" />
+            <div element="ID_HOME_ARC_FEATURE_FIRE_WRATH" />
+            <div element="ID_HOME_ARC_FEATURE_FIERY_SOUL" />
+        </description>
+        <rules>
+            <grant type="Archetype Feature" id="ID_HOME_ARC_FEATURE_FIRE_MAGIC" level="3" />
+            <grant type="Archetype Feature" id="ID_HOME_ARC_FEATURE_HEART_OF_FIRE" level="3" />
+            <grant type="Archetype Feature" id="ID_HOME_ARC_FEATURE_FIRE_IN_THE_VEINS" level="6" />
+            <grant type="Archetype Feature" id="ID_HOME_ARC_FEATURE_FIRE_WRATH" level="11" />
+            <grant type="Archetype Feature" id="ID_HOME_ARC_FEATURE_FIERY_SOUL" level="17" />
+        </rules>
+    </element>
+
+    <!-- Features -->
+    <element name="Fire Magic" type="Archetype Feature" source="Custom Homebrew" id="ID_HOME_ARC_FEATURE_FIRE_MAGIC">
+        <description>
+            <p><em>3rd-level Way of the Fire Elementalist feature</em></p>
+            <p>You learn the <em>control flames</em> cantrip. You can also use your ki to cast the following spells:</p>
+            <ul>
+                <li><strong>Burning Hands:</strong> 2 ki points</li>
+                <li><strong>Scorching Ray:</strong> 3 ki points (6th level)</li>
+                <li><strong>Fireball:</strong> 5 ki points (11th level)</li>
+                <li><strong>Fire Shield:</strong> 6 ki points (17th level)</li>
+            </ul>
+            <p>You don’t need material components to cast these spells. Wisdom is your spellcasting ability for these spells.</p>
+        </description>
+        <rules>
+            <grant type="Spell" id="ID_PHB_SPELL_CONTROL_FLAMES" />
+            <grant type="Spell" id="ID_PHB_SPELL_BURNING_HANDS" level="3" cost="2 ki" />
+            <grant type="Spell" id="ID_PHB_SPELL_SCORCHING_RAY" level="6" cost="3 ki" />
+            <grant type="Spell" id="ID_PHB_SPELL_FIREBALL" level="11" cost="5 ki" />
+            <grant type="Spell" id="ID_PHB_SPELL_FIRE_SHIELD" level="17" cost="6 ki" />
+        </rules>
+    </element>
+
+    <element name="Heart of Fire" type="Archetype Feature" source="Custom Homebrew" id="ID_HOME_ARC_FEATURE_HEART_OF_FIRE">
+        <description>
+            <p><em>3rd-level Way of the Fire Elementalist feature</em></p>
+            <p>When you use your Flurry of Blows, flames are projected from your hands. Choose one creature within 10 feet of you to take fire damage equal to half your monk level (minimum of 1).</p>
+        </description>
+        <rules>
+            <action name="Heart of Fire" type="Flurry of Blows" range="10 ft" />
+            <stat name="heart of fire:damage" value="monk level / 2" min="1" />
+        </rules>
+    </element>
+
+    <element name="Fire in the Veins" type="Archetype Feature" source="Custom Homebrew" id="ID_HOME_ARC_FEATURE_FIRE_IN_THE_VEINS">
+        <description>
+            <p><em>6th-level Way of the Fire Elementalist feature</em></p>
+            <p>You gain resistance to fire damage. Additionally, fire damage caused by your class features ignores resistance to fire damage.</p>
+        </description>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_FIRE" />
+            <action name="Ignore Fire Resistance" type="Passive" />
+        </rules>
+    </element>
+
+    <element name="Fire Wrath" type="Archetype Feature" source="Custom Homebrew" id="ID_HOME_ARC_FEATURE_FIRE_WRATH">
+        <description>
+            <p><em>11th-level Way of the Fire Elementalist feature</em></p>
+            <p>When you are hit by a melee attack, you can use your reaction to cause fire damage to the attacker. The damage equals your monk level.</p>
+        </description>
+        <rules>
+            <reaction name="Fire Wrath" trigger="Hit by melee attack" damage="monk level" type="Fire" />
+        </rules>
+    </element>
+
+    <element name="Fiery Soul" type="Archetype Feature" source="Custom Homebrew" id="ID_HOME_ARC_FEATURE_FIERY_SOUL">
+        <description>
+            <p><em>17th-level Way of the Fire Elementalist feature</em></p>
+            <p>You gain immunity to fire damage. Additionally, fire created by you ignores resistance to fire damage and treats fire immunity as fire resistance.</p>
+        </description>
+        <rules>
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_IMMUNITY_FIRE" />
+            <action name="Ignore Fire Resistance and Treat Immunity as Resistance" type="Passive" />
+        </rules>
+    </element>
+</elements>
