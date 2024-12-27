@@ -3,10 +3,10 @@
     <info>
         <name>Custom Homebrew Content</name>
         <update version="1.0">
-            <file name="homebrew.index" url="https://raw.githubusercontent.com/Daeronth/DnD5e-Aurora-Builder/main/homebrew.index" />
+            <file name="homebrew.index" url="https://raw.githubusercontent.com/Daeronth/DnD5e-Aurora-Builder/refs/heads/main/homebrew.index" />
         </update>
     </info>
     <files>
-        <file name="fire_elementalist.xml" url="https://raw.githubusercontent.com/Daeronth/DnD5e-Aurora-Builder/main/fire_elementalist.xml" />
+        <file name="fire_elementalist.xml" url="https://raw.githubusercontent.com/Daeronth/DnD5e-Aurora-Builder/refs/heads/main/fire_elementalist.xml" />
     </files>
 </index>
