@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <elements>
     <info>
         <name>Way of the Fire Elementalist</name>
@@ -7,7 +7,7 @@
         </update>
     </info>
 
-    <!-- Subclass Definition -->
+    
     <element name="Way of the Fire Elementalist" type="Archetype" source="Custom Homebrew" id="ID_HOME_ARC_WAY_OF_THE_FIRE_ELEMENTALIST">
         <supports>Monastic Tradition</supports>
         <description>
@@ -25,9 +25,9 @@
             <grant type="Archetype Feature" id="ID_HOME_ARC_FEATURE_FIRE_WRATH" level="11" />
             <grant type="Archetype Feature" id="ID_HOME_ARC_FEATURE_FIERY_SOUL" level="17" />
         </rules>
-    </element>
+    <sheet><description>You have unlocked the inner flame, using your Ki to manipulate fire.</description></sheet></element>
 
-    <!-- Features -->
+    
     <element name="Fire Magic" type="Archetype Feature" source="Custom Homebrew" id="ID_HOME_ARC_FEATURE_FIRE_MAGIC">
         <description>
             <p><em>3rd-level Way of the Fire Elementalist feature</em></p>
@@ -42,12 +42,12 @@
         </description>
         <rules>
             <grant type="Spell" id="ID_PHB_SPELL_CONTROL_FLAMES" />
-            <grant type="Spell" id="ID_PHB_SPELL_BURNING_HANDS" level="3" cost="2 ki" />
-            <grant type="Spell" id="ID_PHB_SPELL_SCORCHING_RAY" level="6" cost="3 ki" />
-            <grant type="Spell" id="ID_PHB_SPELL_FIREBALL" level="11" cost="5 ki" />
-            <grant type="Spell" id="ID_PHB_SPELL_FIRE_SHIELD" level="17" cost="6 ki" />
+            <grant type="Spell" id="ID_PHB_SPELL_BURNING_HANDS" level="3" />
+            <grant type="Spell" id="ID_PHB_SPELL_SCORCHING_RAY" level="6" />
+            <grant type="Spell" id="ID_PHB_SPELL_FIREBALL" level="11" />
+            <grant type="Spell" id="ID_PHB_SPELL_FIRE_SHIELD" level="17" />
         </rules>
-    </element>
+    <sheet><description>You can cast fire-based spells using your Ki.</description></sheet></element>
 
     <element name="Heart of Fire" type="Archetype Feature" source="Custom Homebrew" id="ID_HOME_ARC_FEATURE_HEART_OF_FIRE">
         <description>
@@ -58,7 +58,7 @@
             <action name="Heart of Fire" type="Flurry of Blows" range="10 ft" />
             <stat name="heart of fire:damage" value="monk level / 2" min="1" />
         </rules>
-    </element>
+    <sheet><description>Your Flurry of Blows unleashes fire on nearby enemies.</description></sheet></element>
 
     <element name="Fire in the Veins" type="Archetype Feature" source="Custom Homebrew" id="ID_HOME_ARC_FEATURE_FIRE_IN_THE_VEINS">
         <description>
@@ -69,7 +69,7 @@
             <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_FIRE" />
             <action name="Ignore Fire Resistance" type="Passive" />
         </rules>
-    </element>
+    <sheet><description>You gain resistance to fire damage and can ignore fire resistance.</description></sheet></element>
 
     <element name="Fire Wrath" type="Archetype Feature" source="Custom Homebrew" id="ID_HOME_ARC_FEATURE_FIRE_WRATH">
         <description>
@@ -79,7 +79,7 @@
         <rules>
             <reaction name="Fire Wrath" trigger="Hit by melee attack" damage="monk level" type="Fire" />
         </rules>
-    </element>
+    <sheet><description>When hit by a melee attack, you can retaliate with fire damage.</description></sheet></element>
 
     <element name="Fiery Soul" type="Archetype Feature" source="Custom Homebrew" id="ID_HOME_ARC_FEATURE_FIERY_SOUL">
         <description>
@@ -90,5 +90,5 @@
             <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_IMMUNITY_FIRE" />
             <action name="Ignore Fire Resistance and Treat Immunity as Resistance" type="Passive" />
         </rules>
-    </element>
+    <sheet><description>You gain immunity to fire damage and can overcome fire immunity.</description></sheet></element>
 </elements>
